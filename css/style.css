@@ -25,12 +25,45 @@ body {
 header {
   text-align: center;
   background-color: var(--lighter-dark);
-  height: 13%;
+  height: 17vh;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
 }
+
+li{
+  text-align: center;
+  list-style-type: none;
+}
+
+.navbar-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.navbar-item {
+  flex: 1;
+  margin: 5px;
+  border-radius: 7px;
+  padding: 5px;
+  transition: 0.3s;
+  height: 3vh;
+  min-height: 30px;
+  min-width: 100px;
+}
+
+.navbar-item:hover {
+  background-color: var(--primary-hover);
+}
+
+.navbar-link {
+  text-decoration: none;
+  color: #ffffff;
+}
+
 
 .playlist {
   display: flex;
@@ -40,7 +73,7 @@ header {
   margin: 2vh;
   border-radius: 10px;
   overflow-y: auto;
-  height: 61vh;
+  height: 57vh;
 }
 
 .media {
@@ -86,7 +119,7 @@ header {
   position: fixed;
   bottom: 0;
   left: 0;
-  height: 22%;
+  height: 22vh;
 }
 
 .playing-song-title {
@@ -100,7 +133,8 @@ header {
   padding: 10px;
 }
 
-button {
+
+.player button {
   background-color: var(--primary-color);
   border: none;
   border-radius: 50%;
@@ -116,7 +150,7 @@ button {
   transition: background-color 0.3s;
 }
 
-button:hover {
+.player button:hover {
   background-color: var(--primary-hover);
 }
 
@@ -127,6 +161,59 @@ button:hover {
   max-width: 1000px;
   margin: 10px auto;
   border-radius: 5px;
+}
+
+#quiz {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  color: white;
+}
+
+#choices {
+  margin-top: 20px;
+}
+
+.quiz button {
+  display: block;
+  width: 100%;
+  min-width: 200px;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--primary-color);
+  color: white;
+  cursor: pointer;
+}
+
+.quiz button:hover {
+  background-color: var(--primary-hover);
+}
+
+#nextButton {
+  background-color: var(--primary-color);
+}
+
+#nextButton:hover {
+  background-color: var(--primary-hover);
+}
+
+#score {
+  margin-top: 45%;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #5cb85c;
+  font-weight: bold;
 }
 
 /* Responsive Design */

@@ -7,31 +7,39 @@
   <title>Playlist Demo</title>
 
 </head>
-<header>
-  <h1>The Greastest Playlist</h1>
-  <p>Listen to the best songs of all time</p>
-</header>
+<body>
+  <header>
+    <h1>The Greatest Playlist</h1>
+    <p>Listen to the best songs of all time</p>
+    <ul class="navbar-row">
+      <li class="navbar-item">
+        <a href="index.html" class="navbar-link">Playlist</a>
+      </li>
+      <li class="navbar-item">
+        <a href="quiz.html" class="navbar-link">Quiz</a>
+      </li>
+    </ul>
+  </header>
+  
+  <div class="playlist flex-column" id="playlist"></div> <!-- Playlist will be rendered here -->
 
-<body class="flex-column">
-<div class="playlist flex-column" id="playlist"></div> <!-- Playlist will be rendered here -->
+  <div class="player flex-column">
+    <div class="playing-song-title flex-column-item">
+      <h2><span id="songTitle"></span></h2>
+    </div>
 
-<div class="player flex-column">
-  <div class="playing-song-title flex-column-item">
-    <h2><span id="songTitle"></span></h2>
+    <div class="progress-bar flex-column-item" id="progressElement">
+    </div>
+
+    <div class="controls flex-column-item flex-row">
+      <button type="button" class="flex-row-item" id="prevButton" onclick="previousSong()"></button>
+      <button type="button" class="flex-row-item" id="playButton" onclick="playPauseSong()"></button>
+      <button type="button" class="flex-row-item" id="nextButton" onclick="nextSong()"></button>
+
+      <script type="module" src="js/svgs.js"></script>
+    </div>
   </div>
 
-  <div class="progress-bar flex-column-item" id="progressElement">
-  </div>
-
-  <div class="controls flex-column-item flex-row">
-    <button type="button" class="flex-row-item" id="prevButton" onclick="previousSong()"></button>
-    <button type="button" class="flex-row-item" id="playButton" onclick="playPauseSong()"></button>
-    <button type="button" class="flex-row-item" id="nextButton" onclick="nextSong()"></button>
-
-    <script type="module" src="js/svgs.js"></script>
-  </div>
-</div>
-
-<script type="module" src="js/playlist-app.js"></script>
+  <script type="module" src="js/playlist-app.js"></script>
 </body>
 </html>
